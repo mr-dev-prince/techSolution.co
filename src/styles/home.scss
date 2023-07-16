@@ -1,0 +1,148 @@
+@import "colors";
+
+.Home {
+  height: 100vh;
+  width: 100%;
+  background-color: $second;
+
+  &::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: no-repeat center/auto url("../assets/4.jpg");
+    background-size: cover;
+    border-radius: 0 0 8rem 8rem;
+  }
+}
+
+.Home2 {
+  margin-top: -150px;
+  height: 100vh;
+  width: 100%;
+  background: $dark;
+  padding: 500px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  > img {
+    width: 30%;
+    animation: imgUp 0.5s linear infinite alternate;
+  }
+
+  > div {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 5rem;
+    height: 100vh;
+
+    > p {
+      color: $first;
+      letter-spacing: 2px;
+      word-spacing: 5px;
+      font: 100 1.2rem $text3;
+      user-select: none;
+    }
+  }
+}
+
+@keyframes imgUp {
+  to {
+    transform: translateY(-10px);
+  }
+}
+
+.Home3 {
+  width: 100%;
+  height: 120vh;
+  background: $dark;
+  display: flex;
+
+  > div {
+    height: 90vh;
+    width: 70%;
+    background: $first;
+    border-radius: 0 5rem 5rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem;
+
+    h1 {
+      text-transform: uppercase;
+      border-bottom: 2px solid $dark;
+      padding: 0.5rem;
+      color: $dark;
+    }
+
+    p {
+      padding: 5rem;
+      word-spacing: 3px;
+      letter-spacing: 1px;
+      line-height: 170%;
+      font: italic 100 1.2rem $text2;
+    }
+  }
+}
+
+.Home4 {
+  height: 120vh;
+  width: 100%;
+  background: $dark;
+  display: flex;
+  justify-content: flex-end;
+
+  > div {
+    height: 80vh;
+    width: 70%;
+    background: #1648ff;
+    border-radius: 5rem 0 0 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem;
+
+    h1{
+      border-bottom: 2px solid $dark;
+      color: $dark;
+      padding: 3px;
+    }
+
+    > div {
+      width: 100%;
+
+
+      > article {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 5rem;
+        flex-wrap: wrap;
+        padding: 5rem;
+
+        > div{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            animation: imgUp 0.7s linear infinite alternate;
+
+            
+            > svg{
+                font-size: 8rem;
+            }
+
+            p{
+                font-size: 1.2rem;
+            }
+        }
+      }
+    }
+  }
+}
